@@ -74,7 +74,8 @@ body, html {
 /* Additional content styling */
 #additional-content {
     position: absolute;
-    width: 60%;
+    margin: 2vw;
+    width: clamp(100px,60%,800px);
     color: #7e00af;
     text-align: center;
     background-color: rgba(126, 0, 175, 0.1);
@@ -91,7 +92,7 @@ body, html {
 }
 
 #additional-content.welcome {
-    transform: translateY(-35vh);
+    transform: translateY(-10vh);
     opacity: 1;
 }
 
@@ -100,29 +101,32 @@ body, html {
 button#menu {
     opacity: inherit;
     position: absolute;
-    width: 5%;
+    width: clamp(32px,3vw,64px);
+    height: clamp(32px,3vw,64px);
     min-width: 28px;
-    right: -5vw;
+    right: 0;
     top: 0;
     border: solid 2px #c941ff;
     background-color: #aa00ff30;
     margin: 12px 12px 0 0 ;
-    aspect-ratio: 1/1;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 9999px;
-    transition: right ease 0.5s;
 }
 
-button#menu.already-clicked {
-    right: 0;
+button#menu svg {
+    width: clamp(16px,2vw,40px);
+    height: clamp(16px,2vw,40px);
 }
 
 button#menu.already-clicked #menu-open {
     opacity: 1;
-    transform: translateX(5vw) translateY(-3vh);
 }
 
 svg#icon-of-menu-not-open {
-    transform: translateX(2px);
     position: absolute;
     opacity: 1;
     transition: opacity ease 0.5s;
@@ -134,7 +138,7 @@ svg#icon-of-menu-not-open.already-clicked {
 
 svg#icon-of-menu-open {
     opacity: 0;
-    transform: translateX(2px) rotate(180deg);
+    transform: rotate(180deg);
     transition: opacity ease 0.5s;
 }
 
@@ -171,6 +175,61 @@ svg#icon-of-menu-open.already-clicked {
     transform: scale(1.15);
 }
 
+hr.divisor {
+    border: none;
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        #a700d1 40%,
+        #cc00ff 60%,
+        transparent 100%
+    );
+    position: relative;
+    margin: 2rem 0;
+    filter: drop-shadow(0 0 6px #ff00f7) drop-shadow(0 0 12px #a600ff);
+}
+
+hr.divisor::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 4px;
+    background: radial-gradient(circle, rgba(183, 0, 255, 0.4), transparent 70%);
+    pointer-events: none;
+}
+
+/* DESCRIPTION */
+
+h1#owner {
+    text-shadow:
+        0 0 20px #d500f9, 
+        0 0 40px #aa00ff;
+}
+
+section.text-with-image {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section.text-with-image p {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
+
+p {
+    overflow: auto;
+}
+
+img {
+    width: 40%;
+    aspect-ratio: 1/1;
+}
 
 
 /* OTHER */
