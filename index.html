@@ -11,28 +11,59 @@
     <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body id="background-body">
-    <!-- Particles.js container -->
     <div id="particles-js"></div>
 
-    <!-- Scrollable Content -->
-    <div class="content">
-
-        <!-- Text Box with Typewriter Effect -->
+    <main class="content">
         <div class="text-box">
             <div class="typewriter"></div>
             <div class="cursor"></div>
         </div>
-    
+        <div id="additional-content">
+            <button id="menu">
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="icon-of-menu-not-open"
+                >
+                    <line x1="4" y1="9" x2="23" y2="9" stroke="#c941ff" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="16" x2="23" y2="16" stroke="#c941ff" stroke-width="2" stroke-linecap="round" />
+                    <line x1="4" y1="23" x2="23" y2="23" stroke="#c941ff" stroke-width="2" stroke-linecap="round" />
+                </svg>
+                <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 32 32"
+                    xmlns="http://www.w3.org/2000/svg"
+                    id="icon-of-menu-open"
+                >
+                    <polyline
+                        points="20 8 12 16 20 24"
+                        stroke="#c941ff"
+                        stroke-width="3"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        fill="none"
+                    />
+                </svg>
+                <div id="menu-open">
+                    <ul>
+                        <li id="home">Home</li>
+                        <li id="about">About</li>
+                        <li id="avatars">Avatars</li>
+                        <li id="socials">Socials</li>
+                    </ul>
+                </div>
+            </button>
+            <h2>Francikiller</h2>
+            <p>content contents ig? yeah!</p>
+        </div>
         
-    </div>
+    </main>
 
-    <!-- Additional Content to Scroll -->
-    <div class="additional-content">
-        <h2>Content title</h2>
-        <p>content contents ig? yeah!</p>
-    </div>
+    
 
-    <!-- Load particles.js over HTTPS -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="script.js"></script>
 </body>

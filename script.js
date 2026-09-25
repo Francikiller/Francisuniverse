@@ -139,6 +139,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     const body = document.getElementById("background-body");
+    const additionalContent = document.getElementById("additional-content");
 
     // Typewriter effect remains the same
     const textBox = document.querySelector('.typewriter');
@@ -176,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 if (currentTextIndex === 1 && textIndex === 0) {
                     textBox.style.opacity = '0';
                     body.style.overflowY = 'scroll';
+                    additionalContent.classList.add("welcome")
                     return;
                 }
                 currentTextIndex = (currentTextIndex + 1) % texts.length;
@@ -188,4 +190,14 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     typewriter();
+});
+
+const menu = document.getElementById("menu");
+const iconMenuNotOpen = document.getElementById("icon-of-menu-not-open");
+const iconMenuOpen = document.getElementById("icon-of-menu-open");
+
+menu.addEventListener("click", () => {
+    menu.classList.toggle("already-clicked");
+    iconMenuNotOpen.classList.toggle("already-clicked");
+    iconMenuOpen.classList.toggle("already-clicked");
 });
