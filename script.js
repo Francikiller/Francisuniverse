@@ -138,6 +138,8 @@ document.addEventListener("DOMContentLoaded", function() {
         particlesJS('particles-js', getParticleConfig());
     });
 
+    const body = document.getElementById("background-body");
+
     // Typewriter effect remains the same
     const textBox = document.querySelector('.typewriter');
     const texts = ["Welcome", "To Francis Universe."];
@@ -148,7 +150,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     const typeSpeed = 100;
     const deleteSpeed = 50;
-    const pauseBeforeNextText = 2000;
+    const pauseBeforeNextText = 1000;
 
     const typewriter = () => {
         const currentText = texts[currentTextIndex];
@@ -171,8 +173,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(typewriter, deleteSpeed);
             } else {
                 isDeleting = false;
+                if (currentTextIndex === 1 && textIndex === 0) {
+                    textBox.style.opacity = '0';
+                    body.style.overflowY = 'scroll';
+                    return;
+                }
                 currentTextIndex = (currentTextIndex + 1) % texts.length;
-                setTimeout(typewriter, 500);
+                setTimeout(typewriter, 250);
             }
         }
 
