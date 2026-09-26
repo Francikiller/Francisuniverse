@@ -98,7 +98,7 @@ body, html {
 
 /* MENU BUTTON FEATURES */
 
-button#menu {
+#menu {
     opacity: inherit;
     position: absolute;
     width: clamp(32px,3vw,64px);
@@ -109,7 +109,7 @@ button#menu {
     border: solid 2px #c941ff;
     background-color: #aa00ff30;
     margin: 12px 12px 0 0 ;
-    padding: 10px;
+    padding: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -117,12 +117,12 @@ button#menu {
     border-radius: 9999px;
 }
 
-button#menu svg {
+#menu svg {
     width: clamp(16px,2vw,40px);
     height: clamp(16px,2vw,40px);
 }
 
-button#menu.already-clicked #menu-open {
+#menu.already-clicked #menu-open {
     opacity: 1;
 }
 
@@ -231,6 +231,36 @@ img {
     aspect-ratio: 1/1;
 }
 
+img#ds-emoji {
+    width: 32px;
+    height: 32px;
+    transform: translateY(4px);
+}
+
+svg.social {
+    cursor: pointer;
+
+    filter: drop-shadow(0 0 8px #6f248d)
+            drop-shadow(0 0 16px #4d005b)
+            drop-shadow(0 0 32px #aa00ff);
+
+            transition: transform ease 0.4s;
+}
+
+svg.social:hover {
+    transform: scale(1.2);
+}
+
+
+#social-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+a.social-link {
+    color: #6f248d;
+}
 
 /* OTHER */
 
