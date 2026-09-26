@@ -166,12 +166,13 @@ svg#icon-of-menu-open.already-clicked {
     font-family: 'Silkscreen';
     margin: 24px 0;
     font-size: 1.5vw;
-    transition: transform ease 0.3s;
+    transition: transform ease 0.3s, filter ease 0.3s;
 }
 
 #menu-open ul li:hover {
     cursor: pointer;
     transform: scale(1.15);
+    filter: brightness(1.8);
 }
 
 hr.divisor {
