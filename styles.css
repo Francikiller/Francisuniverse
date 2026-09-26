@@ -285,8 +285,8 @@ svg.social {
 
 svg.social:hover {
     transform: scale(1.2);
-    filter: drop-shadow(0 0 8px #a634d3)
-            drop-shadow(0 0 16px #af00ce)
+    filter: drop-shadow(0 0 8px #8f2db6)
+            drop-shadow(0 0 16px #8d00a6)
             drop-shadow(0 0 32px #aa00ff);
 }
 
@@ -297,13 +297,14 @@ svg.social:hover {
 }
 
 a.social-link {
+    height: 24px;
     color: #6f248d;
 
     transition: color ease 0.4s;
 }
 
-a.social-link:hover {
-    color: #a83ad3;
+a.social-link:hover{
+    color: #9539b9;
 }
 
 /* OTHER */
