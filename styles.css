@@ -84,15 +84,15 @@ body, html {
     border: 3px solid #7e00af; 
     display: inline-block;
     opacity: 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); 
-    transform: translateY(0vh);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    top: 30%;
     transition: 
-        transform ease 1s,
+        top ease 1s,
         opacity ease 1s;
 }
 
 #additional-content.welcome {
-    transform: translateY(-10vh);
+    top: 5%;
     opacity: 1;
 }
 
