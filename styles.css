@@ -80,7 +80,7 @@ body, html {
     text-align: center;
     background-color: rgba(126, 0, 175, 0.1);
     padding: 20px;
-    border-radius: 20px; 
+    border-radius: 20px;
     border: 3px solid #7e00af; 
     display: inline-block;
     opacity: 0;
@@ -109,7 +109,6 @@ body, html {
     border: solid 2px #c941ff;
     background-color: #aa00ff30;
     margin: 12px 12px 0 0 ;
-    padding: 5px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -207,9 +206,46 @@ hr.divisor::before {
 
 h1#owner {
     text-shadow:
-        0 0 20px #d500f9, 
-        0 0 40px #aa00ff;
+        0 0 10px #d500f9, 
+        0 0 30px #aa00ff;
 }
+
+.glitch {
+    position: relative;
+    font-weight: bold;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+}
+
+.glitch::before {
+    color: #c941ff;
+    animation: glitch1 0.8s infinite;
+}
+
+.glitch::after {
+    color: #7e00af;
+    animation: glitch2 0.8s infinite;
+}
+
+@keyframes glitch1 {
+    0% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    100% { transform: translate(2px, -2px); }
+}
+
+@keyframes glitch2 {
+    0% { transform: translate(-2px, 2px); }
+    50% { transform: translate(2px, -2px); }
+    100% { transform: translate(-2px, 2px); }
+}
+
 
 section.text-with-image {
     display: flex;
@@ -244,13 +280,15 @@ svg.social {
             drop-shadow(0 0 16px #4d005b)
             drop-shadow(0 0 32px #aa00ff);
 
-            transition: transform ease 0.4s;
+    transition: transform ease 0.4s, filter ease 0.4s;
 }
 
 svg.social:hover {
     transform: scale(1.2);
+    filter: drop-shadow(0 0 8px #a634d3)
+            drop-shadow(0 0 16px #af00ce)
+            drop-shadow(0 0 32px #aa00ff);
 }
-
 
 #social-container {
     display: flex;
@@ -260,6 +298,12 @@ svg.social:hover {
 
 a.social-link {
     color: #6f248d;
+
+    transition: color ease 0.4s;
+}
+
+a.social-link:hover {
+    color: #a83ad3;
 }
 
 /* OTHER */
