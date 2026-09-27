@@ -202,9 +202,4 @@ menu.addEventListener("click", () => {
     menu.classList.toggle("already-clicked");
     iconMenuNotOpen.classList.toggle("already-clicked");
     iconMenuOpen.classList.toggle("already-clicked");
-
-    if (menu.classList.contains("already-clicked")) {
-        const halfHeight = menuOpen.offsetHeight / 2;
-        menuOpen.style.transform = `translateX(10vw) translateY(${halfHeight - halfHeight * 0.3}px)`;
-    }
 });
